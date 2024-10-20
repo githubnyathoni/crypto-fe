@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const checkLocationHostname = () => {
   const version = 'v1';
@@ -8,6 +9,12 @@ const checkLocationHostname = () => {
 };
 
 export const BASE_API_URL = checkLocationHostname();
+
+export const GET_ACCESS_TOKEN = () => {
+  const { accessToken } = useLocalStorage();
+  const decodeToken = atob(accessToken!);
+  return decodeToken;
+};
 
 interface CallAPIProps extends AxiosRequestConfig {
   token?: string;

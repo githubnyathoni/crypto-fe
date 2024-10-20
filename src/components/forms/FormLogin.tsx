@@ -61,6 +61,7 @@ function FormLogin() {
         classname='flex flex-col mb-5'
         label='Username:'
         onChange={handleChangeUsernameInput}
+        value={username}
         required
       />
       <Input
@@ -71,6 +72,7 @@ function FormLogin() {
         classname='flex flex-col mb-5'
         label='Password:'
         onChange={handleChangePasswordInput}
+        value={password}
         required
       />
       <div className='flex justify-center w-full '>

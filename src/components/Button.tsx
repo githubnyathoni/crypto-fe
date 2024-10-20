@@ -18,7 +18,7 @@ function Button({
       disabled={disabled}
       onClick={onClick}
       type={type}
-      className='bg-blue-400 rounded-md py-2 px-4 hover:bg-blue-600 text-white'
+      className='bg-blue-500 rounded-md py-2 px-4 hover:bg-blue-600 text-white'
     >
       {label}
     </button>

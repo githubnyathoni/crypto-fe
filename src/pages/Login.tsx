@@ -1,7 +1,7 @@
 import { Toaster } from 'react-hot-toast';
-import LoginContent from '../components/pages/LoginContent';
 import useLocalStorage from '../hooks/useLocalStorage';
 import { Navigate } from 'react-router-dom';
+import LoginContent from '../components/pages/login/LoginContent';
 
 function LoginPage() {
   const { accessToken } = useLocalStorage();

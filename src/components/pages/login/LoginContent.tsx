@@ -1,4 +1,4 @@
-import FormLogin from '../forms/FormLogin';
+import FormLogin from '../../forms/FormLogin';
 
 function LoginContent() {
   return (

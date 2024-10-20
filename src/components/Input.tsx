@@ -8,7 +8,10 @@ interface InputProps {
   type: 'text' | 'password';
   classname?: string;
   label?: string;
+  readonly?: boolean;
+  value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 function Input({
@@ -19,7 +22,10 @@ function Input({
   type,
   classname = '',
   label = '',
+  readonly = false,
+  value = '',
   onChange = () => {},
+  onClick = () => {},
 }: InputProps) {
   return (
     <div className={classname}>
@@ -41,7 +47,10 @@ function Input({
           id={id}
           type={type}
           onChange={onChange}
+          onClick={onClick}
           required={required}
+          readOnly={readonly}
+          value={value}
           className='text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400 bg-white text-black'
         />
       </div>
