@@ -1,7 +1,6 @@
 import {
   CategoryScale,
   Chart,
-  ChartDataset,
   Legend,
   LinearScale,
   LineElement,

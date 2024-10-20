@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import DataTable from '../../DataTable';
 import Header from '../../Header';
 import MainLayout from '../../layout/MainLayout';

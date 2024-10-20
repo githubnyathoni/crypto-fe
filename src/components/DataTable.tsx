@@ -22,7 +22,6 @@ const DataTable: React.FC<DataTableProps> = ({
   data,
   columns,
   hasMore,
-  loading,
   onClick = () => {},
 }) => {
   return (
