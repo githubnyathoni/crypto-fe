@@ -5,7 +5,7 @@ const checkLocationHostname = () => {
   const version = 'v1';
   const prefix = 'api';
 
-  if (window.location.hostname === 'melodious-pastelito-05c098.netlify.app') {
+  if (window.location.hostname === '108.174.48.153') {
     return `http://108.174.48.153:3000/${version}/${prefix}`;
   }
 
