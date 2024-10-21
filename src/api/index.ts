@@ -1,5 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import useLocalStorage from '../hooks/useLocalStorage';
+import toast from 'react-hot-toast';
 
 const checkLocationHostname = () => {
   const version = 'v1';
@@ -65,3 +66,18 @@ export default async function callAPI({
     return response;
   }
 }
+
+axios.interceptors.response.use(
+  (res) => res,
+  async (err) => {
+    if (err.status === 401) {
+      toast.error('Silahkan login ulang untuk mendapatkan akses kembali');
+      const { removeLocalStorage } = useLocalStorage();
+
+      removeLocalStorage();
+      window.location.href = '/login';
+    }
+
+    return err;
+  }
+);
